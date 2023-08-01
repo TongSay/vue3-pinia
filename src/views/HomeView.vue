@@ -4,16 +4,15 @@ import  Counter  from '../components/Counter.vue';
 import { useAuthStore } from '../stores/auth';
 
 const storeAuth = useAuthStore();
-const {isAuthenticated, user} = storeToRefs(storeAuth);
-
+// const {isAuthenticated, user} = storeToRefs(storeAuth);
 
 
 </script>
 
 <template>
   <main>
-    <div v-if="isAuthenticated">
-      <h4>User name is : {{ user.name }}</h4>
+    <div v-if="storeAuth.isAuthenticated">
+      <h4>User name is : {{ storeAuth.fullname }}</h4>
     </div>
     <Counter />
   </main>
