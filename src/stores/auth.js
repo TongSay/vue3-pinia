@@ -9,4 +9,15 @@ export const useAuthStore = defineStore("auth", {
         }
     }
     ),
+    actions: {
+        logout () {
+            // update state
+            this.$patch((state) => {
+              (state.isAuthenticated = false),(state.user = {});
+            });
+        },
+        login () {
+            this.$reset();
+        }
+    }
 })
