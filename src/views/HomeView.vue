@@ -13,6 +13,8 @@ const storeAuth = useAuthStore();
   <main>
     <div v-if="storeAuth.isAuthenticated">
       <h4>User name is : {{ storeAuth.fullname }}</h4>
+      <!-- <h4>User name is : {{ storeAuth.name }}</h4> -->
+
     </div>
     <Counter />
   </main>
